@@ -9,6 +9,7 @@ class Question(models.Model):
         return self.question_text
 
     question_text = models.CharField(max_length=200)
+    test_text = models.CharField(max_length=100, default="3")
     pub_date = models.DateTimeField("date published")
 
     def was_published_recently(self):
